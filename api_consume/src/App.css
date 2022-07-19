@@ -1,0 +1,28 @@
+.heder {
+  background-color: black;
+  color: azure;
+  display: flex;
+  justify-content: center;
+}
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  /* width: 80%; */
+  padding-left: 5%;
+  height: 7vh;
+  background-color: #808088;
+  align-items: center;
+  color: azure;
+}
+.aside{
+  width: 20%;
+  height: 98vh;
+  background-color: black;
+  color: azure;
+  margin-top: 0;
+  position:relative;
+}
+button{
+  position: fixed;
+  z-index: 88;
+}
