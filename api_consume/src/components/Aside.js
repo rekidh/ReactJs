@@ -1,47 +1,28 @@
-import React from 'react'
-import {useState,useEffect} from 'react'
+import React,{useState,useEffect}from 'react'
 
-const Aside =(props)=>{
-  let data 
-  const hendelClik=()=>{
-    let data = fetch('http://192.168.100.66:5055/program')
-    .then((res)=>res.json())
-    .then((res)=>{
-      console.log(res)
+
+function Aside() {
+  const [datas, setDatas]= useState([])
+
+
+  const getApi=()=>{
+    fetch('http://localhost:5055/program').then((res)=>res.json()).then((res)=>{
+      setDatas(res)
     })
-    .catch((err)=>console.log(err))
-    setIsActif(curent=> !curent)
-    return data = data
   }
-  const [isActive,setIsActif] = useState(false);
-  
-  return(
-    <>
-    <button onClick={hendelClik}>XXX</button> 
-      <div className="aside"  
-        style={{ 
-          width: isActive ? '0' : '',
-          color: isActive ? 'black' : '',
-          display:isActive? 'none':'',
-        }} >
-        <List list={data} />
-      </div> 
-    </>
 
+  useEffect(()=>{
+    getApi()
+  },[])
+
+  return (
+    <div>
+      {/* <button onClick={getApi}>cek</button> */}
+      <ul>
+        {datas.map((data)=><li>{data.bahasa}</li>)}
+      </ul>
+    </div>
   )
-
 }
-export default Aside ;
 
-  
-
-
-const List =(props)=>{
-  const {lists} = props
-  console.log("list",lists)
-    return(
-    <h2>
-      {lists.map((list)=>(<p>{list.id}</p>))}
-    </h2>
-    )
-}
+export default Aside

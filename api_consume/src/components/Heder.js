@@ -1,25 +1,24 @@
 import React from "react";
+
+
 const Heder = (props)=>{
+  const {menu}=props
   return(
-    <> 
-    <div className ="heder">
-      <p>Catatan Program</p>
+    <div className="container" > 
+      <div className="logo">
+      <p>LOGO</p>
+      </div>
+      <ul>
+      {menu.map((i)=>(
+        <li>{i.id}</li>
+        ))}
+      </ul>
+      <div className="nav-btn">
+        <button>login</button>
+        <button>daftar</button>
+      </div>
     </div>
-    <Nav>
-        <div className="logo">jurnal</div>
-        <div className="logo">tols</div>
-        <div className="logo">tutorial</div>
-        <div className="logo">about</div>
-    </Nav>
-    </>
   )
+
 }
 export default Heder;
-
-const Nav =(props)=>{
-  return(
-      <div className = "navigation">
-        {props.children}
-      </div>
-  )
-}
