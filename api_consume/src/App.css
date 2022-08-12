@@ -1,41 +1,89 @@
-.container{
-  margin: 0.02rem 2rem;
+
+.container-nav{
   display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 84, 147, 0.05);
+  justify-content: space-around;
+  background-color: rgba(177, 22, 79, 0.836);
+  color: white;
 }
 .logo{
+  margin: auto 0;
+}
+.container-nav>ul{
   display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
 }
-.container>ul{
-  display: flex;
-}
-.container>ul>li{
+.container-nav>ul>li{
+  margin: auto;
   list-style: none;
-  margin: 1rem;
-  width: 3.5rem;
-  height: 1.5rem;
-  border-radius: 0.25rem;
+  margin: 0.5rem;
 }
-.container>ul>li:hover{
+.container-nav>ul>li:hover{
   background-color: rgba(232, 47, 102, 0.34);
   cursor: pointer;
 }
+.nav-btn{
+  display: flex;
+  align-items: center;
+}
 .nav-btn>button{
-  margin: 1rem;
+  justify-content: space-around;
 }
 
 .hero{
-  margin: 0 2.5rem;
+  padding: 20px 0;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  background-color: aqua;
 }
-
-.hero > img {
+.hero >.gambar> button{
+  position: absolute;
+}
+.hero>.gambar>.prev{
+  top: 50%;
+  left: 0;
+}
+.hero>.gambar>.next{
+  top: 50%;
+  right: 0;
+}
+.hero > .gambar {
+  position: relative;
+  background-color: black;
   display: flex;
   margin: auto;
   width: 800px;
-  height: 450px;
+  height: 400px;
+}
+.text-hero{
+  display: flex;
+  flex-direction:column;
+  width: 50%;
+  align-items: center;
+}
+
+.card-container{
+  position: absolute;
+  top: 70%;
+  right: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 150px;
+}
+
+.card{
+  background-color: royalblue;
+  margin: 0 1em;
+  border-radius: 0.2em;
+}
+.body{
+  height: 100em;
+  background-color: crimson;
+}
+
+.footer{
+  height: 20em;
+  background-color: chocolate;
 }

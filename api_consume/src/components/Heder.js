@@ -4,10 +4,8 @@ import React from "react";
 const Heder = (props)=>{
   const {menu}=props
   return(
-    <div className="container" > 
-      <div className="logo">
-      <p>LOGO</p>
-      </div>
+    <div className="container-nav" > 
+      <div className="logo">LOGO</div>
       <ul>
       {menu.map((i)=>(
         <li>{i.id}</li>

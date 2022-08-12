@@ -17,7 +17,6 @@ function Aside() {
 
   return (
     <div>
-      {/* <button onClick={getApi}>cek</button> */}
       <ul>
         {datas.map((data)=><li>{data.bahasa}</li>)}
       </ul>
