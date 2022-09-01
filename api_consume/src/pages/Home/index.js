@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heder,Body } from '../../components'
+import { Heder,Body, Footer } from '../../components'
 import video from '../../assets/video/video.mp4'
 import './home.css'
 
@@ -9,6 +9,7 @@ const Home = () => {
     <>
     <Heder />
     <Body />
+    <Footer />
     <video src={video } muted autoPlay loop></video>
     </>
       

@@ -1,0 +1,46 @@
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  /* margin: auto; */
+  height: 100vh;
+  color: white;
+
+}
+.container-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 70vh;
+}
+
+.container-input>input{
+  width: 20vw;
+  margin: 1em 0;
+  height: 2em;
+
+}
+@media screen and (max-width:790px){
+  
+  .container-input>input{
+    width: 70vw;
+  }
+  .container-input{
+    margin-top: 0;
+    height: 50vh;
+  }
+  .login-container{
+    height: 95vh;
+  }
+}
+.container-input>input:focus{
+  outline: none;
+}
+.login-container>div>a{
+  color: white;
+}

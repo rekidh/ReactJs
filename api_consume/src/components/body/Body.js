@@ -8,31 +8,31 @@ const Body = () => {
   const data =[
     {
       img:img1,
-      title:"ninuma kopi",
+      title:"Style",
       description:"lorem ipsum lorem ipsum",
       rate:5
     },
     {
       img:img2,
-      title:"ninuma kopi",
+      title:"Food",
       description:"lorem ipsum lorem ipsum",
       rate:4
     },
     {
       img:img3,
-      title:"ninuma kopi",
+      title:"Liburan",
       description:"lorem ipsum lorem ipsum",
       rate:2
     },
     {
       img:img4,
-      title:"ninuma kopi",
+      title:"Stasiun",
       description:"lorem ipsum lorem ipsum",
       rate:4
     },
     {
       img:img5,
-      title:"ninuma kopi",
+      title:"Cetar",
       description:"lorem ipsum lorem ipsum",
       rate:4
     }
