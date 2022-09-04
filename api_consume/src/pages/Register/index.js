@@ -1,29 +1,35 @@
+import React ,{useState}from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '../../components/atoms/Button'
+import axios from 'axios'
+import '../Login/login.css'
 
-import React from 'react'
-import { useState,useEffect } from 'react'
+const Register =()=> {
+  const [email,setEmail]=useState('')
+  const [userName,setUserName]=useState('')
+  const [pass,setPass]=useState('')
+  const postApi= async ()=>{ 
+          await axios.post(`http://192.168.18.255:5055/user`,{
+            email:email,
+            user_name:userName,
+            password:pass
+          })
+          .then((res)=>console.log(res.data[0]))
+        }
 
-const Register = () => {
-    const [datas,setDatas]=useState([])  //<perlu di perhatikan saat ingin mengeset data awal perhatikan jenis data apa yang ingin anda masukan nanti nya'
-useEffect( ()=>{
-  fetch('http://192.168.100.66:5055/')
-  .then((res)=>res.json()).then((res)=>setDatas(res))
-},[])
   return (
-    <div>
-
-      <ul>
-        {
-          datas.map((index)=>
-          <li>
-            <p>name: {index.nama} </p>
-            <p> alamat: {index.alamat}</p>
-            <p>umur: {index.umur}</p>
-            <p>barang : {index.barang.map((i)=><li>{i}</li>)}</p>
-            <p>karcis : {index.karcis.bayar ? index.karcis.posisi :" karcis belum di bayar"}</p>
-          </li>
-        )}
-      </ul>
-    </div>
+      <div className='login-container'>
+        <div className='container-input'>
+          <h3>Registration Form{email}</h3>
+          <input onChange={(e)=>setEmail(e.target.value)} type="text" placeholder="email or user name" />
+          <input onChange={(e)=>setUserName(e.target.value)} type="text" placeholder="username" />
+          <input onChange={(e)=>setPass(e.target.value)} type="password" placeholder="password" />
+          <Button name="login" className="btn-nav" fun={postApi}/>
+        </div>
+        <div>
+          <Link to="/" > Back to Home </Link>
+        </div>
+      </div>
   )
 }
 
